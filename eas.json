@@ -1,0 +1,37 @@
+{
+  "cli": {
+    "version": ">= 5.0.0",
+    "promptToConfigurePushNotifications": false
+  },
+  "build": {
+    "production": {
+      "channel": "production",
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "preview": {
+      "channel": "preview",
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "development": {
+      "channel": "development",
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      }
+    }
+  },
+  "submit": {
+    "production": {
+      "android": {
+        "serviceAccount": "~/google-services.json",
+        "track": "production"
+      }
+    }
+  }
+}
