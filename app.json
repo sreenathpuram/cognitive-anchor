@@ -1,0 +1,73 @@
+{
+  "expo": {
+    "name": "Cognitive Anchor",
+    "slug": "cognitive-anchor",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "cognitiveanchor",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.cognitiveanchor.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Cognitive Anchor uses your camera to help recognize people and objects around you for contextual assistance.",
+        "NSMicrophoneUsageDescription": "Cognitive Anchor uses your microphone to listen to your voice commands and conversations.",
+        "NSPhotoLibraryUsageDescription": "Cognitive Anchor needs access to your photos to help you store and recall memories.",
+        "NSLocationWhenInUseUsageDescription": "Cognitive Anchor uses your location to provide context-aware reminders and assistance."
+      }
+    },
+    "android": {
+      "package": "com.cognitiveanchor.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#4A90E2",
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "backgroundImage": "./assets/images/android-icon-background.png",
+        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+      },
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION"
+      ]
+    },
+    "web": {
+      "output": "single",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#4A90E2",
+          "dark": {
+            "backgroundColor": "#1C1C1E"
+          }
+        }
+      ],
+      "expo-web-browser",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Cognitive Anchor uses your camera to help recognize people and objects around you."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Cognitive Anchor uses your location to provide context-aware assistance."
+        }
+      ]
+    ],
+    "experiments": {
+      "reactCompiler": true
+    }
+  }
+}
